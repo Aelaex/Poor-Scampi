@@ -19,29 +19,123 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="js/regastion.js"> </script>
-<form>
-    <label>
-        <p class="label-txt">ENTER YOUR EMAIL</p>
-        <input type="text" class="input">
-        <div class="line-box">
-            <div class="line"></div>
+<!--Splitter-->
+<div class="row" height="100%">
+    <div class="col-sm-auto">
+        <img src="Pictures/outerborders.gif" align="left" height="50%"/>
+        <br>
+        <img src="Pictures/outerborders.gif" align="left" size="50%"/>
+    </div>
+    <form class="needs-validation" novalidate>
+        <h1>Regestiren und Kreditkarten</h1>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip01">First name</label>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip02">Last name</label>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltipUsername">Username</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                    <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                    </div>
+                </div>
+            </div>
         </div>
-    </label>
-    <label>
-        <p class="label-txt">ENTER YOUR NAME</p>
-        <input type="text" class="input">
-        <div class="line-box">
-            <div class="line"></div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">City</label>
+                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                <div class="invalid-tooltip">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationTooltip04">State</label>
+                <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                <div class="invalid-tooltip">
+                    Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationTooltip05">Zip</label>
+                <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                <div class="invalid-tooltip">
+                    Please provide a valid zip.
+                </div>
+            </div>
         </div>
-    </label>
-    <label>
-        <p class="label-txt">ENTER YOUR PASSWORD</p>
-        <input type="text" class="input">
-        <div class="line-box">
-            <div class="line"></div>
+        <div class="form-row">
+            <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                    <label class="custom-control-label" for="credit">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                    <label class="custom-control-label" for="debit">Debit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                    <label class="custom-control-label" for="paypal">PayPal</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="cc-name">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                        Name on card is required
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="cc-number">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Credit card number is required
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label for="cc-expiration">Expiration</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Expiration date required
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="cc-cvv">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Security code required
+                    </div>
+                </div>
+            </div>
         </div>
-    </label>
-    <button type="submit">submit</button>
-</form>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+    <div class="col-sm-auto">
+        <img src="Pictures/outerborders.gif" align="right" size="50%"/>
+        <br/>
+        <img src="Pictures/outerborders.gif" align="right" size="50%"/>
+    </div>
+</div>
+
 </body>
 </html>
