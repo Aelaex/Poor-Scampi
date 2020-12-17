@@ -14,42 +14,17 @@
 <body style="overflow:hidden;height: 100%; margin: 0;">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!--Header Loader-->
+<script src="jquery.js"></script>
+<script>
+    $(function(){
+        $("#header").load("header.html");
+    });
+</script>
+
     <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-
-
-
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="home.html">
-                            <img src="Icon.png" width="30" height="30" alt="">Home
-                        </a>
-                    </li>
-                    <li class="navar-nav">
-                        <a class="navbar-brand" href="registaion.html">
-                            Registration
-                        </a>
-                    </li>
-
-
-
-
-                </ul>
-
-
-            </div>
-
-
-
-
-        </nav>
-
-        <iframe src="registaion.html" title="W3Schools Free Online Web Tutorials" width="100%"></iframe>
-
-
+        <!--Header Loader-->
+        <div id="header"></div>
 
         <!--Splitter-->
         <div class="row" id="mainrow" style="min-height:95%">
