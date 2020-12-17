@@ -16,20 +16,31 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
 
-    <div class="container">
-        <img src="Pictures/Background.webp" class="rounded mx-auto d-block" width="60%" height="60%"/>
-    </div>
+    <?php
+    class Test{
+        public $result;
+        public function __construct(){
+            if(isset($_POST['submit'])){
+                $this->result=$this->myfunction();
+            }
+        }
+        private function myfunction(){
+            //some actions
+            return "values";
+        }
+    }
 
-
-
-    <a href="testing1.php" target="fenetreA"><img src="Pictures/Background.webp" width="295" height="36"/></a>
-
-    <form action="testing1.php" method="post">
-        <input name="name" type="text">
-        <input type="submit">
+    if(isset($_POST)){
+        $test = new Test();
+        $result=$test->result;
+    }
+    ?>
+    <form method="post" action="" enctype="multipart/form-data" name="uploadForm">
+        <input name="test" />
+        <input type="submit" name="submit" />
     </form>
 
-
+    <div id="data"><?php echo $result; ?></div>
 
 </div>
 </body>
