@@ -32,7 +32,7 @@
     <!--Header Loader-->
     <div id="header"></div>
 
-    <form class="needs-validation" novalidate>
+    <form action="start.php">
         <h1>Registrierung und festlegen der Zahlungs-Methode</h1>
         <div class="form-row">
             <div class="col-md-4 mb-3">
