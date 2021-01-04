@@ -1,8 +1,4 @@
-<?php
-if (session_status() === PHP_SESSION_NONE){echo "<script>window.location = 'home.html'</script>";}
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
