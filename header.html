@@ -10,6 +10,18 @@
     <title>Poor-Scampi</title>
     <link rel="icon" href="Icon.png">
 </head>
+<style>
+    .box{
+        display: none; width: 100%;
+    }
+
+    a:hover + .box, .box:hover{
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+</style>
 <body style="overflow:hidden">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -33,10 +45,14 @@
         </ul>
     </div>
     <div align="right">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1024px-Microsoft_Account.svg.png" width="50" height="50"/><span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li><iframe src="login.html"height="175px" width="200px"></iframe></li>
-        </ul>
+
+
+        <a href="login.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1024px-Microsoft_Account.svg.png" width="50" height="50"/>
+        </a>
+        <div class="box">
+            <iframe src="login.html" height="175px" width="200px">            </iframe>
+        </div>
 
         <!--<a href="login.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1024px-Microsoft_Account.svg.png" width="50" height="50"/></a>
         -->
