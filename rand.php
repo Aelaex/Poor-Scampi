@@ -22,9 +22,12 @@
 
     </nav>
     <?php
-    $random =  rand(10,20);
-    echo $random
+    $random1 =  rand(6,49);
+    echo '<img scr="Pictures/Kugel/zahlenkugel-v1-200px-01.png">'
+
     ?>
+
+
 
 
 </div>
