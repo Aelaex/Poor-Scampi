@@ -23,7 +23,7 @@
     </nav>
     <?php
     $random1 =  rand(6,49);
-    echo '<img scr="Pictures/Kugel/zahlenkugel-v1-200px-01.png">'
+    echo "<img scr='./Pictures/Kugel/zahlenkugel-v1-200px-01.png'>"
 
     ?>
 
