@@ -46,7 +46,7 @@ session_start();
 
 <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
 <form action="rand.php" method="post">
-    <input type="text" class="form-control bfh-number">
+
         <div class="center">
         Zahl1: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl1">
         <div class="center">
