@@ -47,16 +47,21 @@ session_start();
 <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
 <form action="rand.php" method="post">
     <input type="text" class="form-control bfh-number">
-    <div class="center">
-    Zahl1: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true">
-    </div>
-    Zahl1: <input type="number" name="Zahl1"><br>
-    Zahl2: <input type="text" name="Zahl2"><br>
-    Zahl3: <input type="text" name="Zahl3"><br>
-    Zahl4: <input type="text" name="Zahl4"><br>
-    Zahl5: <input type="text" name="Zahl5"><br>
-    Zahl6: <input type="text" name="Zahl6"><br>
-    <input type="submit">
+        <div class="center">
+        Zahl1: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl1">
+        <div class="center">
+            Zahl2: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl2">
+        </div>
+        <div class="center">
+            Zahl3: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl3">
+        </div>
+            <div class="center">
+                Zahl4: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl4">
+            </div>
+            <div class="center">
+                Zahl5: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl5">
+            </div>
+        <input type="submit">
 </form>
 </div>
 
