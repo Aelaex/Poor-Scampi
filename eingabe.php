@@ -46,11 +46,11 @@ session_start();
 
 <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
 <form action="rand.php" method="post">
-    <div class="xxx" data-name="quantity" data-value="2" data-id="80"></div>
-    <div class="xxx" data-name="quantity"></div>
-    <div class="xxx" data-name="quantity" data-value="100" data-id="99"></div>
-
-    Zahl1: <input type="text" name="Zahl1"><br>
+    <input type="text" class="form-control bfh-number">
+    <div class="center">
+    Zahl1: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true">
+    </div>
+    Zahl1: <input type="number" name="Zahl1"><br>
     Zahl2: <input type="text" name="Zahl2"><br>
     Zahl3: <input type="text" name="Zahl3"><br>
     Zahl4: <input type="text" name="Zahl4"><br>
