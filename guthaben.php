@@ -47,14 +47,11 @@ session_start();
 
         <div class="container">
             <?php
-                echo "<p> Guten Tag ".$_POST["mail"]." :)</p><br>";
-                echo "<p> Dein Aktuelles Guthaben beträgt";
-                echo "<p>".$_POST["mail"]."</p>";
-
-                echo "Favorite color is " . $_SESSION["value"] . ".<br>";
-
-
+                echo "<p> Guten Tag ".$_SESSION["Mail"]." :)</p><br>";
+                echo "Dein Guthaben beträgt " . $_SESSION["Guthaben"] . ".<br>";
+                echo "<p> Wie wäre es mit mehr?</p>";
             ?>
+            <a href="https://www.paypal.me/mrLaisd"><img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2014/05/paypal-logo.jpg" width="200px"></a>
         </div>
 
         <div class="col-sm-auto">
