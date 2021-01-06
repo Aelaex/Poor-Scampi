@@ -40,14 +40,14 @@ session_start();
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationTooltip01">First name</label>
-                <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" >
                 <div class="valid-tooltip">
                     Looks good!
                 </div>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationTooltip02">Last name</label>
-                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" >
                 <div class="valid-tooltip">
                     Looks good!
                 </div>
@@ -58,7 +58,7 @@ session_start();
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
                     </div>
-                    <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                    <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" >
                     <div class="invalid-tooltip">
                         Please choose a unique and valid username.
                     </div>
@@ -68,21 +68,21 @@ session_start();
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <label for="validationTooltip03">City</label>
-                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" >
                 <div class="invalid-tooltip">
                     Please provide a valid city.
                 </div>
             </div>
             <div class="col-md-3 mb-3">
                 <label for="validationTooltip04">State</label>
-                <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                <input type="text" class="form-control" id="validationTooltip04" placeholder="State" >
                 <div class="invalid-tooltip">
                     Please provide a valid state.
                 </div>
             </div>
             <div class="col-md-3 mb-3">
                 <label for="validationTooltip05">Zip</label>
-                <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" >
                 <div class="invalid-tooltip">
                     Please provide a valid zip.
                 </div>
