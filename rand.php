@@ -1,10 +1,10 @@
 <?php
 $Einsatzt = $_POST["Einsatzt"];
-$Guthaben = $_SESSION["Guthaben"];
+$Guthaben = $_POST["Guthaben"];
 $Guthaben = $Guthaben - $Einsatzt;
 $_SESSION["Guthaben"] = $Guthaben;
 if ($Guthaben > 0){
-    echo "<script>window.location = 'home.html'</script>";
+    echo "<script>window.location = 'tomuchmoney.html'</script>";
 }
 ?>
 <!DOCTYPE html>
