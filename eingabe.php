@@ -48,21 +48,42 @@ session_start();
 <form action="rand.php" method="post">
 
         <div class="center">
-        Zahl1: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl1">
+        Zahl1: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl1">
         <div class="center">
-            Zahl2: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl2">
+            Zahl2: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl2">
         </div>
         <div class="center">
-            Zahl3: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl3">
+            Zahl3: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl3">
         </div>
             <div class="center">
-                Zahl4: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl4">
+                Zahl4: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl4">
             </div>
             <div class="center">
-                Zahl5: <input type="number" class="form-control bfh-number" data-min="5" data-max="25" data-wrap="true" name="Zahl5">
+                Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5">
             </div>
-        <input type="submit">
+            <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
 </form>
+    <script>
+
+        function compare()
+        {
+
+            var Numbers = [document.getElementById("Zahl1").value, document.getElementById("Zahl2").value, document.getElementById("Zahl3").value, document.getElementById("Zahl4").value, document.getElementById("Zahl5").value]
+
+            var y
+            var x
+            for(y = 0; y < 5; y++) {
+                for(x = 0; x < Numbers.length; x++) {
+                    if(Numbers[y] == Numbers[x])
+                    {
+                        alert("The numbers are equal");
+                    }
+                    }
+                }
+            }
+        }
+
+    </script>
 </div>
 
 </body>
