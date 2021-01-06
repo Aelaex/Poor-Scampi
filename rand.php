@@ -77,7 +77,12 @@ if ($Guthaben > 0){
      }
 
      if ($i > 0){
-         echo "Sie haben Gewonnen " .$i. " Zahlen sind richtig";
+         $Gewinn = 0;
+         $Gewinn = $Einsatzt * $i;
+         echo "<p>Sie haben Gewonnen " .$i. " Zahlen sind richtig. Sie haben ".$Gewinn." Euro gewonnen</p>";
+         $Guthaben = $Guthaben +$Gewinn;
+         $_SESSION["Guthaben"] = $Guthaben;
+
      }
      ?>
 

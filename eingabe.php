@@ -48,25 +48,37 @@ session_start();
 
 <form action="rand.php" method="post">
 
-        <div class="center">
-        Zahl1: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl1">
-        <div class="center">
-            Zahl2: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl2">
-        </div>
-        <div class="center">
-            Zahl3: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl3">
-        </div>
-            <div class="center">
-                Zahl4: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl4">
-            </div>
-            <div class="center">
-                Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5">
-            </div>
-            <div class="center">
-                Einsatzt: <input type="number" class="form-control bfh-number" min="1"  data-wrap="true" name="Einsatzt">
-            </div>
+    <div class="center">
+        <?php
+        // to change a session variable, just overwrite it
+        $Guthaben =  $_SESSION["Guthaben"];
 
-            <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
+        echo "<p>Sie haben so viel: ".$Guthaben." €</p>";
+        ?>
+    </div>
+    <div class="center">
+        Zahl1: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl1">
+    </div>
+    <div class="center">
+        Zahl2: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl2">
+    </div>
+    <div class="center">
+        Zahl3: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl3">
+    </div>
+    <div class="center">
+        Zahl4: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl4">
+    </div>
+    <div class="center">
+        Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5">
+    </div>
+    <div class="center">
+        Einsatzt: <input type="number" class="form-control bfh-number" min="1"  data-wrap="true" name="Einsatzt">
+    </div>
+    <div class="center">
+        <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
+    </div>
+
+
 </form>
     <script>
 
