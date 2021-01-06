@@ -62,6 +62,9 @@ session_start();
             <div class="center">
                 Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5">
             </div>
+            <div class="center">
+                Einsatzt: <input type="number" class="form-control bfh-number" min="1"  data-wrap="true" name="Einsatzt">
+            </div>
 
             <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
 </form>
