@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" style="height: 10%;
       margin: 0;">
@@ -12,19 +15,20 @@
     <link rel="icon" href="Icon.png">
 </head>
 <body style="overflow:hidden;height: 100%; margin: 0;">
+<?php
+// Set session variables
+$_SESSION["value"] = 150;
+$_SESSION["favanimal"] = "cat";
+echo "Session variables are set.";
+?>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <!--Header Loader-->
         <script src="jquery.js"></script>
         <script>
-            $(function(){
-                $("#header").load("header.html");
-            });
-        </script>
-        <script type="text/javascript">
-            document.getElementById("myButton").onclick = function () {
-                location.href = "guthaben.html";
-            };
+$(function(){
+    $("#header").load("header.html");
+});
         </script>
 
         <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
@@ -40,9 +44,14 @@
                 </div>
 
                 <div class="container">
-                    <p align="center"> Email-Adresse: <input type="email"/></p>
-                    <p align="center">Kennwort: <input type="password"/></p>
-                    <button onclick="location.href='guthaben.html'">Click Me</button>
+
+
+                    <form action="guthaben.php" method="post">
+                        mail: <input type="text" name="mail"><br>
+                        passwort: <input type="password" name="passwort"><br>
+                        <input type="submit">
+                    </form>
+
                 </div>
 
                 <div class="col-sm-auto">
@@ -54,10 +63,7 @@
         </div>
 
 
-        <form action="guthaben.html" method="post">
-            mailing: <input type="text" name="mailing"><br>
-            <input type="submit">
-        </form>
+
 
 
 
