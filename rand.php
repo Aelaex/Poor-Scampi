@@ -3,8 +3,8 @@ $Einsatzt = $_POST["Einsatzt"];
 $Guthaben = $_POST["Guthaben"];
 $Guthaben = $Guthaben - $Einsatzt;
 $_SESSION["Guthaben"] = $Guthaben;
-if ($Guthaben > 0){
-    echo "<script>window.location = 'tomuchmoney.html'</script>";
+if ($Guthaben < 0){
+  echo "<script>window.location = 'tomuchmoney.html'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -63,7 +63,7 @@ if ($Guthaben > 0){
      <?php
      $i = 0;
 
-     $Zahl = array($_POST["Zahl1"],$_POST["Zahl2"],$_POST["Zahl3"],$_POST["Zahl4"],$_POST["Zahl5"],$_POST["Zahl5"]);
+     $Zahl = array($_POST["Zahl1"],$_POST["Zahl2"],$_POST["Zahl3"],$_POST["Zahl4"],$_POST["Zahl5"],$_POST["Zahl6"]);
      sort($Zahl);
 
      for($x = 0; $x < $arrlength; $x++) {
