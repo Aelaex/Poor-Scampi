@@ -63,7 +63,7 @@ if ($Guthaben < 0){
      <?php
      $i = 0;
 
-     $Zahl = array($_POST["Zahl1"],$_POST["Zahl2"],$_POST["Zahl3"],$_POST["Zahl4"],$_POST["Zahl5"],$_POST["Zahl6"]);
+     $Zahl = array($_POST["Zahl1"],$_POST["Zahl2"],$_POST["Zahl3"],$_POST["Zahl4"],$_POST["Zahl5"]);
      sort($Zahl);
 
      for($x = 0; $x < $arrlength; $x++) {
@@ -85,6 +85,24 @@ if ($Guthaben < 0){
 
      }
      ?>
+    <form action="eingabe.php">
+        <div class="center">
+            <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
+        </div>
+    </form>
+    </form>
+    <script type="text/javascript">
+        var form = document.getElementById('form'),
+            button = form['submit'];
+        form.onsubmit = function(e) {
+            return !!form.getAttribute('data-allow-submit');
+        };
+        button.onclick = function() {
+            form.setAttribute('data-allow-submit', 1);
+            form.submit();
+        };
+    </script>
+
 
 </div>
 </body>

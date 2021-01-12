@@ -82,6 +82,17 @@ session_start();
 
 
 </form>
+    <script type="text/javascript">
+        var form = document.getElementById('form'),
+            button = form['submit'];
+        form.onsubmit = function(e) {
+            return !!form.getAttribute('data-allow-submit');
+        };
+        button.onclick = function() {
+            form.setAttribute('data-allow-submit', 1);
+            form.submit();
+        };
+    </script>
     <script>
 
         function compare()
