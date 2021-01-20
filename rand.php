@@ -1,11 +1,5 @@
 <?php
-$Einsatzt = $_POST["Einsatzt"];
-$Guthaben = $_POST["Guthaben"];
-$Guthaben = $Guthaben - $Einsatzt;
-$_SESSION["Guthaben"] = $Guthaben;
-if ($Guthaben < 0){
-  echo "<script>window.location = 'tomuchmoney.html'</script>";
-}
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en" style="height: 100%;
@@ -39,6 +33,16 @@ if ($Guthaben < 0){
     </nav>
     <h3>Das sind unsere zahlen</h3>
     <?php
+    $Einsatzt = $_POST["Einsatzt"];
+    $Guthaben = $_SESSION["Guthaben"];
+    $Guthaben = $Guthaben - $Einsatzt;
+    $_SESSION["Guthaben"] = $Guthaben;
+    if ($Guthaben < $Einsatzt){
+        echo "<script>window.location = 'tomuchmoney.html'</script>";
+    }
+    ?>
+
+    <?php
     $random0 =  rand(1,49);
 
     $random = array($random0);
@@ -55,7 +59,7 @@ if ($Guthaben < 0){
     }
     sort($random);
 
-    for($x = 0; $x < $arrlength; $x++) {
+    for($x = 0; $x < $arrlength -1; $x++) {
         echo "<img src='Pictures/Kugel/zahlenkugel-v1-200px-".$random[$x].".png' >";
         }
     ?>
@@ -66,7 +70,7 @@ if ($Guthaben < 0){
      $Zahl = array($_POST["Zahl1"],$_POST["Zahl2"],$_POST["Zahl3"],$_POST["Zahl4"],$_POST["Zahl5"]);
      sort($Zahl);
 
-     for($x = 0; $x < $arrlength; $x++) {
+     for($x = 0; $x < $arrlength -1; $x++) {
          echo "<img src='Pictures/Kugel/zahlenkugel-v1-200px-".$Zahl[$x].".png' >";
      }
 
@@ -87,14 +91,14 @@ if ($Guthaben < 0){
      ?>
     <form action="eingabe.php">
         <div class="center">
-            <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
+            <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Nochmal">
         </div>
     </form>
     </form>
     <script type="text/javascript">
         var form = document.getElementById('form'),
             button = form['submit'];
-        form.onsubmit = function(e) {
+        window.onsubmit = function(e) {
             return !!form.getAttribute('data-allow-submit');
         };
         button.onclick = function() {
