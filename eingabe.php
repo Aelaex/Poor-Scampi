@@ -32,14 +32,32 @@ session_start();
                 </a>
             </li>
             <li class="navar-nav">
-                <a class="navbar-brand" href="registaion.html">
+                <a class="navbar-brand" href="registaion.php">
                     Registration
                 </a>
             </li>
             <li class="navar-nav">
-                <a class="nav-item nav-link disabled" href="adminconsole.html">Admin-Konsole</a>
+                <a class="nav-item nav-link" href="adminconsole.html">Admin-Konsole</a>
+            </li>
+            <li class="navbar-nav">
+                <a class="nav-item nav-link" href="eingabe.php">Einsatz</a>
             </li>
         </ul>
+    </div>
+    <div align="right">
+
+
+        <a href="guthaben.php">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1024px-Microsoft_Account.svg.png" width="50" height="50"/>
+        </a>
+        <!--<div class="box">
+            <iframe src="login.html" height="175px" width="200px">            </iframe>
+        </div>
+
+        <a href="login.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Account.svg/1024px-Microsoft_Account.svg.png" width="50" height="50"/></a>
+        -->
+
+
     </div>
 </nav>
 <body style="overflow:hidden;height: 100%; margin: 0;">
