@@ -1,5 +1,12 @@
 <?php
 session_start();
+try {
+    $Guthaben =  $_SESSION["Guthaben"];
+}
+catch (Exception $e){
+    $Guthaben =  0;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,10 +76,13 @@ session_start();
     <div class="center">
         <?php
         // to change a session variable, just overwrite it
-        $Guthaben =  $_SESSION["Guthaben"];
-        echo "<input type='hidden' value='".$Guthaben."' name='Guthaben' >";
 
-        echo "<p>Sie haben so viel: ".$Guthaben." €</p>";
+
+            echo "<input type='hidden' value='".$Guthaben."' name='Guthaben' >";
+
+            echo "<p>Sie haben : ".$Guthaben." €</p>";
+
+
         ?>
     </div>
 

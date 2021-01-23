@@ -35,11 +35,14 @@ session_start();
     <?php
     $Einsatzt = $_POST["Einsatzt"];
     $Guthaben = $_SESSION["Guthaben"];
-    $Guthaben = $Guthaben - $Einsatzt;
-    $_SESSION["Guthaben"] = $Guthaben;
     if ($Guthaben < $Einsatzt){
         echo "<script>window.location = 'tomuchmoney.html'</script>";
     }
+    $Guthaben = $Guthaben - $Einsatzt;
+    else if ($Guthaben < 0){
+        echo "<script>window.location = 'tomuchmoney.html'</script>";
+    }
+    $_SESSION["Guthaben"] = $Guthaben;
     ?>
 
     <?php
