@@ -34,7 +34,7 @@ catch (Exception $e){
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="navbar-brand" href="home.html">
+                <a class="navbar-brand" href="home.php">
                     <img src="Icon.png" width="30" height="30" alt="">Home
                 </a>
             </li>
@@ -87,25 +87,25 @@ catch (Exception $e){
     </div>
 
     <div class="center">
-        Zahl1: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl1">
+        Zahl1: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl1" required>
     </div>
     <div class="center">
-        Zahl2: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl2">
+        Zahl2: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl2" required>
     </div>
     <div class="center">
-        Zahl3: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl3">
+        Zahl3: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl3" required>
     </div>
     <div class="center">
-        Zahl4: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl4">
+        Zahl4: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl4" required>
     </div>
     <div class="center">
-        Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5">
+        Zahl5: <input type="number" class="form-control bfh-number" min="1" max="49" data-wrap="true" name="Zahl5" required>
     </div>
     <div class="center">
-        Einsatzt: <input type="number" class="form-control bfh-number" min="1"  data-wrap="true" name="Einsatzt">
+        Einsatzt: <input type="number" class="form-control bfh-number" min="1"  data-wrap="true" name="Einsatzt" required>
     </div>
     <div class="center">
-        <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Submit">
+        <input  class="btn btn-primary"  onclick="compare()" type="submit" value="Spielen">
     </div>
 
 
@@ -121,27 +121,7 @@ catch (Exception $e){
             form.submit();
         };
     </script>
-    <script>
 
-        function compare()
-        {
-
-            var Numbers = [document.getElementById("Zahl1").value, document.getElementById("Zahl2").value, document.getElementById("Zahl3").value, document.getElementById("Zahl4").value, document.getElementById("Zahl5").value]
-
-            var y
-            var x
-            for(y = 0; y < 5; y++) {
-                for(x = 0; x < Numbers.length; x++) {
-                    if(Numbers[y] == Numbers[x])
-                    {
-                        alert("The numbers are equal");
-                    }
-                    }
-                }
-            }
-        }
-
-    </script>
 </div>
 
 </body>

@@ -16,17 +16,13 @@ session_start();
 </head>
 <body style="overflow:hidden;height: 100%; margin: 0;">
 <script src="jquery.js"></script>
-<script>
-    $(function(){
-        $("#header").load("header.html");
-    });
-</script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <div id="wrapper" style="min-height:100%;background-color:#fbfbfb">
     <div id="header"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">
+        <a class="navbar-brand" href="eingabe.php">
             <img src="Icon.png" width="30" height="30" alt="">
         </a>
 
@@ -39,7 +35,7 @@ session_start();
         echo "<script>window.location = 'tomuchmoney.html'</script>";
     }
     $Guthaben = $Guthaben - $Einsatzt;
-    else if ($Guthaben < 0){
+    if ($Guthaben < 0){
         echo "<script>window.location = 'tomuchmoney.html'</script>";
     }
     $_SESSION["Guthaben"] = $Guthaben;
@@ -90,6 +86,9 @@ session_start();
          $Guthaben = $Guthaben +$Gewinn;
          $_SESSION["Guthaben"] = $Guthaben;
 
+     }
+     else {
+         echo "<p>Du bist aber ein Poor Scampi. Versuchs doch mal nochmal</p>";
      }
      ?>
     <form action="eingabe.php">

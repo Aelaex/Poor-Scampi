@@ -1,6 +1,11 @@
 <?php session_start();
-$_SESSION["Guthaben"] = "0";
-$_SESSION["Mail"] = "";
+$Guthaben = $_SESSION["Guthaben"];
+if ( $Guthaben = ""){
+    $_SESSION["Guthaben"] = "0";
+}
+else{
+
+}
 ?>
     <!DOCTYPE html>
     <html lang="en" style="height: 100%;
